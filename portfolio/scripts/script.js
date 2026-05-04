@@ -40,7 +40,7 @@ console.log(typeof tituloProfissional);
 console.log(typeof NOME);
 console.log(typeof curso);
 
-document.getElementsById("meuNome").innerText = NOME; 
+document.getElementById("meuNome").innerText = NOME; 
 document.getElementById("tituloProfissional").innerText = tituloProfissional;
 document.getElementById("minhaBio").innerText = minhaBio; 
 document.getElementById("anoFormatura").innerText = "Ano de formatura" + anoFormatura;
