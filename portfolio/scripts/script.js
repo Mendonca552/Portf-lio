@@ -93,7 +93,97 @@ function calcular() {
         anos--;
         meses += 12;
     }
- 
-    document.getElementById("tempoRestante").innerText = 
+    //se anos para formatura for 0 ou menor que 0 não quero que imprima os anos 
+    if (anos <= 0) {
+        document.getElementById("tempoRestante").innerText = `Tempo de curso para a formatura: ${dias} dia(s) | ${meses} mês(es). Continue firme, você está na reta final.`;
+    } else if (anos === 1) {
+        document.getElementById("tempoRestante").innerText = 
         `Tempo de curso para a formatura: ${dias} dia(s) | ${meses} mês(es) | ${anos} ano(s)`;
+    } else {
+        document.getElementById("tempoRestante").innerText = 
+        `Tempo de curso para a formatura: ${dias} dia(s) | ${meses} mês(es) | ${anos} ano(s)`;
+    }
+
+    //Essa parte deve ser resolvida 
+    if (anos <= 0 && meses <=0 && dias <=0) {
+    document.getElementById("tempoRestante").innerText = 
+    `Tempo de curso para a formatura: Parabéns, você formou!`;
 }
+
+}
+
+let nota = 8;
+let aprovado = (nota >= 6)? "Aprovado" : "Reprovado"; 
+
+document.write(`<p> Nota: ${nota} - ${aprovado} </p>`);
+
+let diaEscrito;
+//usar isso no portfolio  
+let diaSemana = 4;
+switch(diaSemana) {
+    case 1: "Domingo"; break;
+    case 2: "Segunda"; break;
+    case 3: "Terça"; break;
+    case 4: "Quarta"; break;
+    case 5: "Quinta"; break; 
+    case 6: "Sexta"; break;
+    case 7: "Sábado"; break;
+    default: "Dia inválido";
+}
+
+document.write(`<p>Hoje é: ${diaEscrito} </p>`);
+
+// ─── QUIZ DE PERFIL ───────────────────────────────────────────
+const btnVisual      = document.getElementById("btn-visual");
+const btnLogica      = document.getElementById("btn-logica");
+const resultadoQuiz  = document.getElementById("resultado-quiz");
+
+btnVisual.addEventListener("click", function() {
+  
+  resultadoQuiz.innerHTML = `
+    <strong>🎨 Você tem perfil Front-End!</strong><br>
+    Você curte criar interfaces, trabalhar com cores, layouts e a experiência do usuário.
+    Tecnologias pra você: HTML, CSS, React, Vue.
+  `;
+  resultadoQuiz.style.backgroundColor = "#e8f4fd";
+  resultadoQuiz.style.padding          = "12px";
+  resultadoQuiz.style.borderRadius     = "8px";
+  resultadoQuiz.style.marginTop        = "10px";
+});
+
+btnLogica.addEventListener("click", function() {
+  
+  resultadoQuiz.innerHTML = `
+    <strong>⚙️ Você tem perfil Back-End!</strong><br>
+    Você curte resolver problemas complexos, trabalhar com dados e fazer a mágica acontecer nos bastidores.
+    Tecnologias pra você: Node.js, Python, bancos de dados.
+  `;
+  resultadoQuiz.style.backgroundColor = "#e8f8f0";
+  resultadoQuiz.style.padding          = "12px";
+  resultadoQuiz.style.borderRadius     = "8px";
+  resultadoQuiz.style.marginTop        = "10px";
+});
+
+
+let pontosFront  = 0;
+let pontosBack   = 0;
+
+btnVisual.addEventListener("click", function() {
+  pontosFront++;
+  exibirPerfil();
+});
+
+btnLogica.addEventListener("click", function() {
+  pontosBack++;
+  exibirPerfil();
+});
+
+function exibirPerfil() {
+  if (pontosFront > pontosBack) {
+    resultadoQuiz.textContent = "🎨 Perfil Front-End!";
+  } else if (pontosBack > pontosFront) {
+    resultadoQuiz.textContent = "⚙️ Perfil Back-End!";
+  } else {
+    resultadoQuiz.textContent = "🔄 Perfil Full Stack — você é dos dois!";
+  }
+}  
