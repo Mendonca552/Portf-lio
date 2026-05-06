@@ -16,8 +16,33 @@
         <p id="minhaBio"></p>
         <p id="anoFormatura"></p>    
         <p id="anoIngresso"></p>
-        <p id="curso"></p>
+        <p id="tempoRestanteParaFormatura"></p>
+
+        <label for="nome">Nome: </label>
+        <input type="text" id="nome" placeholder="Digite aqui o seu nome">
+        <button onclick="mostrar()"></button> <!--onclick chama a função mostrar()-->
+      
+        <p id="resultado"></p>
+        
+        <label for="formatura">Data da formatura: </label>
+        <input type="date" id="formatura" placeholder="Digite aqui a data da sua formatura">
+        <br>
+        <label for="ingresso">Data de ingresso: </label>
+        <input type="date" id="ingresso" placeholder="Digite aqui a data do seu ingresso">
+        <br>
+        <button onclick="mostrar2()">Botão da mágica </button> <!--onclick chama a função mostrar()-->
+      
+        <p id="resultado2"></p>
+        
+        <label for="dataInicio">Data de ingresso: </label>
+        <input type="date" id="dataInicio">
+        <br>
+        <label for="dataFim">Data de formatura: </label>
+        <input type="date" id="dataFim">
+        <br> 
+        <button onclick="calcular()">Calcular</button>
         <p id="tempoRestante"></p>
+
     </main>
 
     <script src="../scripts/script.js"></script>
