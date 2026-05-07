@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
-    
-    <title>Portifólio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/style.css">
+  <title>Portfólio</title>
 </head>
 <body>
+  <div class="container">
 
-    <main>
-        <button id="modoClaroEscuro">Modo Claro</button>
-        <h1 id="meuNome"></h1>
-        <h2 id="tituloProfissional"></h2>
-        <p id="minhaBio"></p>
-        <p id="anoFormatura"></p>    
-        <p id="anoIngresso"></p>
-        <p id="tempoRestanteParaFormatura"></p>
+    <div class="top-bar">
+      <button id="modoClaroEscuro">Modo escuro</button>
+    </div>
 
-        <label for="nome">Nome: </label>
-        <input type="text" id="nome" placeholder="Digite aqui o seu nome">
-        <button onclick="mostrar()"></button> <!--onclick chama a função mostrar()-->
-      
-        <p id="resultado"></p>
-        
-        <label for="formatura">Data da formatura: </label>
-        <input type="date" id="formatura" placeholder="Digite aqui a data da sua formatura">
-        <br>
-        <label for="ingresso">Data de ingresso: </label>
-        <input type="date" id="ingresso" placeholder="Digite aqui a data do seu ingresso">
-        <br>
-        <button onclick="mostrar2()">Botão da mágica </button> <!--onclick chama a função mostrar()-->
-      
-        <p id="resultado2"></p>
-        
-        <label for="dataInicio">Data de ingresso: </label>
-        <input type="date" id="dataInicio">
-        <br>
-        <label for="dataFim">Data de formatura: </label>
-        <input type="date" id="dataFim">
-        <br> 
-        <button onclick="calcular()">Calcular</button>
-        <p id="tempoRestante"></p>
+    <div class="hero">
+      <h1>Maria Eduarda Pereira Mendonça</h1>
+      <p class="titulo">Estudante de Desenvolvimento de Sistemas</p>
+      <p class="bio">
+        Tenho 18 anos e estou construindo meu caminho no mundo da tecnologia.
+        Apaixonada por transformar ideias em código, aprendo todos os dias como
+        criar soluções que fazem diferença. Curiosa, dedicada e sempre em busca
+        do próximo desafio.
+      </p>
+    </div>
 
-```<section id="quiz">
-            <h2>Descubra seu perfil dev</h2>
-            <p>Você prefere trabalhar com...</p>
+    <section>
+      <h2>Tempo de curso</h2>
+      <div class="form-row">
+        <div>
+          <label for="dataInicio">Data de ingresso</label>
+          <input type="date" id="dataInicio">
+        </div>
+        <div>
+          <label for="dataFim">Data de formatura</label>
+          <input type="date" id="dataFim">
+        </div>
+      </div>
+      <button class="btn" onclick="calcular()">Calcular</button>
+      <p id="tempoRestante"></p>
+    </section>
 
-            <button id="btn-visual">🎨 Visual e design</button>
-            <button id="btn-logica">⚙️ Lógica e dados</button>
+    <section>
+      <h2>Descubra seu perfil dev</h2>
+      <p class="quiz-desc">Você prefere trabalhar com...</p>
+      <div class="quiz-buttons">
+        <button class="btn-quiz" id="btn-visual" onclick="votar('visual')">Visual e design</button>
+        <button class="btn-quiz" id="btn-logica" onclick="votar('logica')">Lógica e dados</button>
+      </div>
+      <p id="resultado-quiz"></p>
+    </section>
 
-            <div id="resultado-quiz"></div>
-        </section>```
-    </main>
-
-    <script src="../scripts/script.js"></script>
+  </div>
+  <script src="../scripts/script.js"></script>
 </body>
-</html>
+</html>""
