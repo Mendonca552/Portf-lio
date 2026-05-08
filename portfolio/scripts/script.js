@@ -72,3 +72,9 @@ function mostrarPerfil() {
   else if (pontosBack > pontosFront) el.textContent = "Você tem perfil Back-End!";
   else                               el.textContent = "Você tem perfil Full Stack!";
 }
+
+for (/**Gatilho inicial/começo*/ let i=0; /*limite,limitador,roda enquanto*/i<= 20; i++/*incremento e decremento */){
+  let pares = (i % 2 === 0)? "Par" : "impar";
+  console.log(`${i} - ${pares} `);
+}
+
