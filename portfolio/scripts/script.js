@@ -78,3 +78,30 @@ for (/**Gatilho inicial/começo*/ let i=0; /*limite,limitador,roda enquanto*/i<=
   console.log(`${i} - ${pares} `);
 }
 
+let object = {
+  nome: "Maria Duda",
+  Idade: "18",
+  profissao: "tecnica em desenvolvimento de sistemas"
+}
+for (let chave in object) {
+  document.write(`<p> ${chave} : ${object[chave]}</p>`);
+}
+
+
+let alunos = ["Maria", "Biel", "Guel"];
+for (let conten of alunos) {
+  if (conten === "Maria") {
+    document.write(`<p> ${conten} - Presente </p>`);
+  } else {
+    document.write(`<p> ${conten} - Ausente </p>`);
+  }
+}
+
+let num = prompt("Digite um número par: ");
+while (num % 2 !== 0) {
+  num = prompt ("Ops, esse número não é par. Tenta denovo ai fi")
+}
+
+do {
+  num = prompt("Diga um número par: ")
+} while (num % 2 !== 0)
